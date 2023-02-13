@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CLActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".TimerActivity">
+
+    <TextView
+        android:id="@+id/tvScramble"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvChronometer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="chronometerOnClick"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btNewScramble"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@null"
+        android:onClick="btNewScrambleOnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScramble" />
+
+    <TextView
+        android:id="@+id/frontSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/frontSide4"
+        app:layout_constraintTop_toTopOf="@+id/frontSide1" />
+
+
+    <TextView
+        android:id="@+id/frontSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/frontSide4"
+        app:layout_constraintEnd_toStartOf="@+id/frontSide2" />
+
+    <TextView
+        android:id="@+id/frontSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/frontSide4"
+        app:layout_constraintTop_toTopOf="@+id/frontSide1" />
+
+
+    <TextView
+        android:id="@+id/frontSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/frontSide4"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide1" />
+
+    <TextView
+        android:id="@+id/frontSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/frontSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/frontSide4"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide1" />
+
+
+    <TextView
+        android:id="@+id/frontSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/frontSide3"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide3" />
+
+    <TextView
+        android:id="@+id/frontSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/frontSide6"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide4" />
+
+    <TextView
+        android:id="@+id/frontSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/green_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/frontSide7"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide5" />
+
+    <TextView
+        android:id="@+id/upSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/upSide1"
+        app:layout_constraintTop_toTopOf="@+id/upSide1" />
+
+    <TextView
+        android:id="@+id/upSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/upSide4"
+        app:layout_constraintEnd_toEndOf="@+id/upSide4" />
+
+    <TextView
+        android:id="@+id/upSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/upSide1"
+        app:layout_constraintTop_toTopOf="@+id/upSide1" />
+
+    <TextView
+        android:id="@+id/upSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/upSide4"
+        app:layout_constraintTop_toTopOf="@+id/upSide4" />
+
+    <TextView
+        android:id="@+id/upSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/upSide7"
+        app:layout_constraintEnd_toEndOf="@+id/upSide7" />
+
+    <TextView
+        android:id="@+id/upSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/upSide4"
+        app:layout_constraintTop_toBottomOf="@+id/upSide2" />
+
+    <TextView
+        android:id="@+id/upSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/upSide3"
+        app:layout_constraintTop_toBottomOf="@+id/upSide3" />
+
+    <TextView
+        android:id="@+id/upSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/frontSide1"
+        app:layout_constraintEnd_toEndOf="@+id/frontSide1" />
+
+    <TextView
+        android:id="@+id/upSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/white_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/upSide4"
+        app:layout_constraintTop_toBottomOf="@+id/upSide5" />
+
+    <TextView
+        android:id="@+id/downSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/downSide1"
+        app:layout_constraintTop_toTopOf="@+id/downSide1" />
+
+    <TextView
+        android:id="@+id/downSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/frontSide7"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide7" />
+
+    <TextView
+        android:id="@+id/downSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/downSide1"
+        app:layout_constraintTop_toTopOf="@+id/downSide1" />
+
+    <TextView
+        android:id="@+id/downSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toStartOf="@+id/downSide0"
+        app:layout_constraintTop_toBottomOf="@+id/downSide0" />
+
+    <TextView
+        android:id="@+id/downSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/downSide3"
+        app:layout_constraintTop_toBottomOf="@+id/downSide1" />
+
+    <TextView
+        android:id="@+id/downSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/downSide4"
+        app:layout_constraintTop_toBottomOf="@+id/downSide2" />
+
+    <TextView
+        android:id="@+id/downSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toStartOf="@+id/downSide3"
+        app:layout_constraintTop_toBottomOf="@+id/downSide3" />
+
+    <TextView
+        android:id="@+id/downSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/downSide6"
+        app:layout_constraintTop_toBottomOf="@+id/downSide4" />
+
+    <TextView
+        android:id="@+id/downSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/yellow_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/downSide7"
+        app:layout_constraintTop_toBottomOf="@+id/downSide5" />
+
+    <TextView
+        android:id="@+id/rightSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/rightSide3"
+        app:layout_constraintEnd_toEndOf="@+id/rightSide3" />
+
+    <TextView
+        android:id="@+id/rightSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide0"
+        app:layout_constraintTop_toTopOf="@+id/rightSide0" />
+
+    <TextView
+        android:id="@+id/rightSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide1"
+        app:layout_constraintTop_toTopOf="@+id/rightSide1" />
+
+    <TextView
+        android:id="@+id/rightSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginStart="1dp"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/frontSide5"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide2" />
+
+    <TextView
+        android:id="@+id/rightSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide3"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide1" />
+
+    <TextView
+        android:id="@+id/rightSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide4"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide2" />
+
+    <TextView
+        android:id="@+id/rightSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/rightSide3"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide3" />
+
+    <TextView
+        android:id="@+id/rightSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide6"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide4" />
+
+    <TextView
+        android:id="@+id/rightSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/red_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide7"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide5" />
+
+
+    <TextView
+        android:id="@+id/backSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/backSide3"
+        app:layout_constraintStart_toStartOf="@+id/backSide3" />
+
+    <TextView
+        android:id="@+id/backSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide0"
+        app:layout_constraintTop_toTopOf="@+id/backSide0" />
+
+    <TextView
+        android:id="@+id/backSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide1"
+        app:layout_constraintTop_toTopOf="@+id/backSide1" />
+
+    <TextView
+        android:id="@+id/backSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginStart="1dp"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/rightSide5"
+        app:layout_constraintTop_toBottomOf="@+id/rightSide2" />
+
+    <TextView
+        android:id="@+id/backSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide3"
+        app:layout_constraintTop_toBottomOf="@+id/backSide1" />
+
+    <TextView
+        android:id="@+id/backSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide4"
+        app:layout_constraintTop_toBottomOf="@+id/backSide2" />
+
+    <TextView
+        android:id="@+id/backSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/backSide3"
+        app:layout_constraintTop_toBottomOf="@+id/backSide3" />
+
+    <TextView
+        android:id="@+id/backSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide6"
+        app:layout_constraintTop_toBottomOf="@+id/backSide4" />
+
+    <TextView
+        android:id="@+id/backSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/blue_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/backSide7"
+        app:layout_constraintTop_toBottomOf="@+id/backSide5" />
+
+    <TextView
+        android:id="@+id/leftSide0"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/leftSide1"
+        app:layout_constraintTop_toTopOf="@+id/leftSide1" />
+
+    <TextView
+        android:id="@+id/leftSide1"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/leftSide2"
+        app:layout_constraintTop_toTopOf="@+id/leftSide2" />
+
+    <TextView
+        android:id="@+id/leftSide2"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintBottom_toTopOf="@+id/leftSide5"
+        app:layout_constraintEnd_toEndOf="@+id/leftSide5" />
+
+    <TextView
+        android:id="@+id/leftSide3"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/leftSide4"
+        app:layout_constraintTop_toBottomOf="@+id/leftSide0" />
+
+    <TextView
+        android:id="@+id/leftSide4"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/leftSide5"
+        app:layout_constraintTop_toBottomOf="@+id/leftSide2" />
+
+    <TextView
+        android:id="@+id/leftSide5"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toStartOf="@+id/frontSide3"
+        app:layout_constraintTop_toBottomOf="@+id/frontSide0" />
+
+    <TextView
+        android:id="@+id/leftSide6"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintEnd_toEndOf="@+id/leftSide3"
+        app:layout_constraintTop_toBottomOf="@+id/leftSide3" />
+
+    <TextView
+        android:id="@+id/leftSide7"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/leftSide6"
+        app:layout_constraintTop_toBottomOf="@+id/leftSide4" />
+
+    <TextView
+        android:id="@+id/leftSide8"
+        android:layout_width="@dimen/blocks_size"
+        android:layout_height="@dimen/blocks_size"
+        android:background="@drawable/orange_border"
+        android:clickable="true"
+        android:onClick="tvChangeSize"
+        app:layout_constraintStart_toEndOf="@+id/leftSide7"
+        app:layout_constraintTop_toBottomOf="@+id/leftSide5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

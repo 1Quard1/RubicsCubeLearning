@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btExercisesOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btRubicsCube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bt_exercises" />
+
+    <ImageButton
+        android:id="@+id/btRubicsCube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btRubicsCubeOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btTest"
+        app:layout_constraintEnd_toEndOf="@+id/btExercises"
+        app:layout_constraintStart_toStartOf="@+id/btExercises"
+        app:layout_constraintTop_toBottomOf="@+id/btExercises"
+        app:srcCompat="@drawable/bt_rubics_cube" />
+
+    <ImageButton
+        android:id="@+id/btTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btTestOnClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btRubicsCube"
+        app:layout_constraintStart_toStartOf="@+id/btRubicsCube"
+        app:layout_constraintTop_toBottomOf="@+id/btRubicsCube"
+        app:srcCompat="@drawable/bt_test" />
+</androidx.constraintlayout.widget.ConstraintLayout>

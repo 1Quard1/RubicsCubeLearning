@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".RotationLanguageActivity">
+
+    <ImageButton
+        android:id="@+id/btHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bt_home" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:paddingRight="10sp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Язык вращения"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Для того, чтобы понимать формулы, используемые для сборки, нужно ознакомиться с языком вращений.\nЯзык вращений – это особые обозначения движений граней кубика, при помощи который можно записать какой-либо алгоритм, решение или скрамбл (последовательность ходов, с помощью которой запутывают кубик)\n\n"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F - front - фронтальная сторона
+\nB - back - задняя сторона
+\nL - left - левая сторона
+\nR - right - правая сторона
+\nU - up - верхняя сторона
+\nD - down - нижняя сторона\n\n
+Fw (f) - фронтальная сторона вместе со средним слоем
+\nBw (b) - задняя сторона вместе со средним слоем
+\nLw (l) - левая сторона вместе со средним слоем
+\nRw (r) - правая сторона вместе со средним слоем
+\nUw (u) - верхняя сторона вместе со средним слоем
+\nDw (d) - нижняя сторона вместе со средним слоем\n\n"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Также существуют более редкие движения, которые практически никогда не используются в сборках:\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="M - middle - средний слой, находящийся между правой (R) и левой (L) сторонами
+\nS - standing - средний слой, находящийся между фронтальной (F) и задней (B) сторонами
+\nE - equatorial - средний слой, находящийся между верхней (U) и нижней (D) сторонами\n\n"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Кроме вращений граней куба, существуют обозначения, указывающие на изменения положения кубика в пространстве.\nЭти движения называются перехватами:\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="x - весь куб вращается от себя по плоскости, совпадающей с правым (R) и левым (L) слоями (F превращается в U)
+\nx' - весь куб вращается к себе по плоскости, совпадающей с правым (R) и левым (L) слоями (F превращается в D)
+\ny - весь куб вращается по часовой стрелке в горизонтальной плоскости (F превращается в L)
+\ny' - весь куб вращается против часовой стрелки в горизонтальной плоскости (F превращается в R)
+\nz - весь куб вращается по часовой стрелке в фронтальной плоскости (U превращается в R)
+\nz' - весь куб вращается против часовой стрелки в фронтальной плоскости (U превращается в L)\n\n"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Движения кубика и перехваты записываются в соответствии со следующими правилами:
+\n\n- Если написана только буква - крутим сторону по часовой стрелке, как если бы мы смотрели на грань в лицо
+\n\n- Если после буквы стоит штрих «'» - крутим сторону против часовой стрелки, как если бы мы смотрели на грань в лицо
+\n\n- Если после буквы стоит «2» - крутим эту сторону на 180 градусов. Если ещё стоит штрих, к примеру U2', то это означает, что в данном алгоритме удобнее вращать U2 против часовой стрелки"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

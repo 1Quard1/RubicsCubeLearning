@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="blocks_size">10sp</dimen>
+    <dimen name="blocks_size_large">25sp</dimen>
+    <dimen name="margin_small_block">450sp</dimen>
+    <dimen name="chronometer_text_small">40sp</dimen>
+    <dimen name="chronometer_text_large">70sp</dimen>
+    <dimen name="text_size">20sp</dimen>
+</resources>

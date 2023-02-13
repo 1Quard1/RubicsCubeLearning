@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".StageActivity">
+
+    <ImageButton
+        android:id="@+id/btCross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btCrossOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btF2L"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bt_cross" />
+
+    <ImageButton
+        android:id="@+id/btF2L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btF2LOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btOLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCross"
+        app:srcCompat="@drawable/bt_f2l" />
+
+    <ImageButton
+        android:id="@+id/btOLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btOLLOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btPLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btF2L"
+        app:srcCompat="@drawable/bt_oll" />
+
+    <ImageButton
+        android:id="@+id/btPLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btPLLOnClick"
+        app:layout_constraintBottom_toTopOf="@+id/btHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btOLL"
+        app:srcCompat="@drawable/bt_pll" />
+
+    <ImageButton
+        android:id="@+id/btHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        android:onClick="btHomeOnClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bt_home" />
+</androidx.constraintlayout.widget.ConstraintLayout>

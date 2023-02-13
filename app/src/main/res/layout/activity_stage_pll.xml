@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_brown"
+    tools:context=".StagePLLActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bt_home" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:paddingRight="10sp">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сборка последнего слоя (PLL)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PLL (Permutation of the Last Layer) – заключительный этап сборки в методе Фридрих, заключающийся в перестановке (пермутации) ребер и улов последнего слоя, относительно друг друга, когда они уже ориентированы. Для каждой из 21 ситуации были подобраны скоростные алгоритмы"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nТреугольники углов (А-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll1" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lw' U R' D2 R U' R' D2 R2\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll2" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="x R2 D2 R U R' D2 R U' R\n\nТерминатор (E-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll3" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="x' R U' R' D R U R' D' R U R' D R U' R' D'\n\nСаночки (Z-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll4" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="U' M' U M2 U M2 U M' U2 M2\n\nКрест сторон (H-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll5" />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="M2 U' M2 U2 M2 U' M2\n\nТреугольники сторон (U-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll6" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R U' R U R U R U' R' U' R2\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll7" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R2 U R U R' U' R' U' R' U R'\n\nЛямбды (J-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll8" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R U R' F' R U R' U' R' F R2 U' R' U'\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll9" />
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="U' R' U L' U2 R U' R' U2 R L\n\nCемерки (R-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll10" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R' U2 R U2 R' F R U R' U' R' F' R2 U'\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll11" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L U2 L' U2 L F' L' U' L U L F L2 U\n\nБуква Т (T-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll12" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R U R' U' R' F R2 U' R' U' R U R' F'\n\nКопье (Y-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll13" />
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F R U' R' U' R U R' F' R U R' U' R' F R F'\n\nПараллельный перенос (F-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll14" />
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R\n\nЛетающая тарелка (V-perm)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll15" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R' U R' U' y R' F' R2 U' R' U R' F R F\n\nБуквы X (N-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll16" />
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll17" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R' U R U' R' F' U' F R U R' F R' F' R U' R\n\nВосьмерки (G-perms)"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll18" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R2' F2 R U2 R U2' R' F R U R' U' R' F R2\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll19" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R2' F' R U R U' R' F' R U2' R' U2' R' F2 R2\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll20" />
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R2 Uw R' U R' U' R Uw' R2 y' R' U R\n"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pll21" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="F' U' F R2 Uw R' U R U' R Uw' R2'"
+                android:textAlignment="center"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

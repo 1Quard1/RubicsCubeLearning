@@ -25,6 +25,7 @@ class TimerActivity : AppCompatActivity() {
     lateinit var tvBackSide: MutableList<TextView>
     lateinit var tvLeftSide: MutableList<TextView>
     lateinit var tvSides: MutableList<MutableList<TextView>>
+    var test = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
